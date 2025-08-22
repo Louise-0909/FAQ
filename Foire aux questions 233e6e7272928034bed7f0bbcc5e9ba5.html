@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Foire aux questions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="233e6e72-7292-8034-bed7-f0bbcc5e9ba5" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🫥</span></div><h1 class="page-title">Foire aux questions</h1><p class="page-description"></p></header><div class="page-body"><p id="233e6e72-7292-801b-aa83-d7c256846a3b" class="">
+</p><ul id="233e6e72-7292-801f-ba67-c3ce88686ad4" class="toggle"><li><details open=""><summary>A quoi sert ma carte étudiante ?</summary><p id="233e6e72-7292-808c-8609-f8a8b478581b" class="">Grâce à votre carte d’étudiant, vous pouvez accéder aux bâtiments de l’université, payer vos repas au Crous et au Cujas, réserver des salles de travail et accéder à la salle de sport d’Assas. Vous pouvez aussi emprunter des livres et ordinateurs à la bibliothèque universitaire d’Assas ainsi qu’imprimer des documents.</p><p id="233e6e72-7292-8076-8c21-ffbf6e0f35df" class="">Enfin, votre carte d’étudiant sera le justificatif de votre statut étudiant durant tout votre scolarité à Paris 2 : elle vous permettra de bénéficier de réductions, et d’accéder aux diverses bibliothèques universitaires de Paris.</p></details></li></ul><ul id="233e6e72-7292-8019-bcf7-fe6a872442d2" class="toggle"><li><details open=""><summary>Comment activer ma carte étudiante ?</summary><p id="233e6e72-7292-801c-99d3-ee47afe38100" class="">Afin de pouvoir payer vos repas au Crous et imprimer des documents à la bibliothèque, il faudra activer votre carte sur le site izly.fr : vous pouvez y créer un compte de sorte à virer de l’argent sur votre carte Izly.</p></details></li></ul><ul id="233e6e72-7292-80a3-8b69-f5777ed035fa" class="toggle"><li><details open=""><summary>Perdre sa carte étudiante </summary><p id="233e6e72-7292-8088-bd13-d5a61f3c2506" class="">Il faut prévenir votre service de scolarité au plus vite. En attendant d’en avoir une nouvelle, votre certificat de scolarité vous servira de justificatif, à l’entrée de l’université notamment.</p></details></li></ul><ul id="233e6e72-7292-8062-9a9a-c9510e2266fc" class="toggle"><li><details open=""><summary>Comment réserver une salle de travail ?</summary><p id="233e6e72-7292-80d9-9551-ceb5ef924058" class="">Sur la mezzanine du centre Assas se trouvent plusieurs salles de travail. Vous pouvez réserver une salle de travail sur les écrans situés près du Portalis et de l’accueil, sous réserve de deux heures hebdomadaires par étudiant. Seule votre carte pourra ouvrir les portes de la salle en question.</p></details></li></ul><ul id="233e6e72-7292-80f2-bf71-e2fb2589454c" class="toggle"><li><details open=""><summary>Qu’est-ce que l’ENT (Espace numérique de travail)</summary><p id="233e6e72-7292-8032-bf23-d0df311744a9" class="">Chaque étudiant est doté d’une adresse électronique qui est utilisée par l’université pour le contacter. C’est notamment sur cette adresse que les chargés de travaux dirigés communiquent le plus souvent avec les étudiants, c’est pourquoi il est conseillé de la regarder régulièrement. Le format est le suivant : <a href="mailto:pr%C3%A9nom.nom@etudiants.u-paris2.fr">pré</a><a href="mailto:nom.nom@etudiants.u-paris2.fr">nom.nom@etudiants.u-paris2.fr</a></p><p id="233e6e72-7292-80fa-9ba9-e50ecc638afd" class="">Votre compte ENT vous permet aussi de vous connecter sur le réseau Wi-Fi de vos centres. Le réseau du centre Assas est WIFI-Paris2, par exemple.</p></details></li></ul><ul id="233e6e72-7292-80eb-bca6-f64b71e6058d" class="toggle"><li><details open=""><summary><strong>Comment peut-on choisir une langue supplémentaire ? Qu&#x27;est-ce que cela apporte ?</strong></summary><p id="233e6e72-7292-8031-970b-c42a12e8169c" class="">Pour choisir une langue supplémentaire (allemand, espagnol, portugais, italien, arabe, chinois et russe), cela se passe lors de l’inscription pédagogique. L&#x27;enseignement facultatif permet à l&#x27;étudiant d&#x27;obtenir jusqu&#x27;à 3 points supplémentaires pour l&#x27;année qui seront ajoutés à la note générale. La durée des TD est de 1h30 sur 20 semaines réparties en deux semestres.</p></details></li></ul><ul id="233e6e72-7292-8061-811d-c430ef3c924b" class="toggle"><li><details open=""><summary>Qu’est-ce que le collège de droit ? Et celui d’économie ? Quelle différence y a-t-il avec le parcours classique ?</summary><p id="233e6e72-7292-809f-974b-d268cabbfec7" class="">Le Collège de droit est une formation d’excellence destinée aux étudiants ayant eu mention très bien au baccalauréat. Il s’agit d’un parcours renforcé de la licence qui se déroule en 3 ans. La sélection des étudiants se fait sur examen du dossier et passage d’un test courant juillet. Il propose des enseignements spécifiques sous forme de séminaires en droit comparé, en économie et gestion ou en philosophie et sociologie du droit. Ces enseignements, dispensés en complément des cours de licence, sont validés par un diplôme d’université (de même par le collège d’économie).</p><p id="233e6e72-7292-80bf-90b6-dd2c67d4ea56" class="">La première année, les étudiants du collège ont à la fois des cours d’introduction au droit comparé, de microéconomie/gestion et de philosophie/sociologie du droit les deux semestres. Il faut compter 15h sur le semestre en plus de la licence pour chacune des matières. A l’issue de la première année, les étudiants ont le choix entre 3 filières :</p><ul id="233e6e72-7292-8068-a3b3-e50b90de3116" class="bulleted-list"><li style="list-style-type:disc">la filière fondements du droit qui fournit un socle général de connaissances relevant de la « culture juridique générale »,</li></ul><ul id="233e6e72-7292-80a7-8773-eda2ce0dab72" class="bulleted-list"><li style="list-style-type:disc">la filière économie/gestion qui analyse les modes de fonctionnement de l’entreprise,</li></ul><ul id="233e6e72-7292-80fd-a25c-c9ae94b186b0" class="bulleted-list"><li style="list-style-type:disc">la filière internationale qui étudie les enjeux liés à l’internationalisation du droit.</li></ul><p id="233e6e72-7292-809d-953a-e0d2a60bd559" class="">Le collège de droit est aussi ouvert aux étudiants en L2 et en L3 sous réserve d’excellentes notes (à partir de 13-14 de moyenne) dans la licence classique. Pour y rester il faut obtenir au moins 13 de moyenne au collège et 12 à la licence.</p><ul id="233e6e72-7292-805b-9439-d22119c8d3cb" class="bulleted-list"><li style="list-style-type:disc">Le collège d’économie s’adresse aux étudiants souhaitant approfondir le programme de licence de Sciences économiques et gestion. Pour y rentrer, il faut avoir eu au minimum mention bien au baccalauréat. Les enseignements du Collège se déroulent sur trois ans et sont dispensés sous forme de séminaires avec de petits effectifs. Les diplômés du Collège sont particulièrement bien formés pour accéder aux masters de l’université Paris II Panthéon-Assas, ou d’autres établissements (école de commerce, etc.).<p id="233e6e72-7292-80a6-85f6-c515f685d792" class="">Il existe deux filières au sein du collège d’économie :</p><ul id="233e6e72-7292-8030-878a-ebb4b078097e" class="bulleted-list"><li style="list-style-type:circle">le parcours ingénierie en analyse économique : Ce parcours comprend des cours supplémentaires en statistiques et mathématiques au premier semestre (6h de cours en plus de la licence) et au deuxième semestre des cours de compléments microéconomiques et macroéconomiques en commun avec l’autre parcours du collège. Les étudiants ayant suivi ce parcours sont particulièrement bien formés pour intégrer le master Ingénierie statistique et financières de l’université,</li></ul><ul id="233e6e72-7292-8032-8911-f6b6cc0484d5" class="bulleted-list"><li style="list-style-type:circle">le parcours économie et droit : Ce parcours comprend des cours supplémentaires en économie et en droit complétant la licence de sciences économiques et gestion. Les étudiants issus de ce parcours sont ainsi particulièrement bien formés pour se spécialiser dans les domaines mêlant questions juridiques et économiques. Au premier semestre le cours s’intitule introduction à l’étude du droit et Principes de droit public (6h de cours en plus par semaine). Au deuxième semestre, les cours sont les mêmes que ceux de la filière ingénierie en analyse économique.</li></ul><p id="233e6e72-7292-8094-b875-ece303cd302e" class="">Les étudiants n’ayant pas pu rentrer au collège en L1 peuvent aussi postuler en L2 et L3. Pour rester au collège d’économie il faut valider sa licence et avoir au minimum 12 de moyenne générale aux cours du collège.</p></li></ul><p id="233e6e72-7292-8054-87a7-db249feb6022" class="">
+</p><ul id="233e6e72-7292-8056-8574-e3937802eecf" class="bulleted-list"><li style="list-style-type:disc">Quelle est la différence entre le parcours classique et le parcours réussite ?<p id="233e6e72-7292-80fd-830b-e9b34b150dc6" class="">Le parcours réussite (uniquement en L1) est conçu comme une année de remise à niveau et s’adresse majoritairement aux étudiants titulaires de baccalauréat professionnels et technologiques et est imposé à ceux ayant eu de mauvais résultats lors des tests d’orientation. Les étudiants de ce parcours en droit ont 3 matières en moins par rapport au parcours classique qui sont remplacées par un bloc méthodologique : 3 heures de français, 3 heures de culture générale et 1h30 de tutorat.</p><p id="233e6e72-7292-8075-8a08-c38fa5d84d3c" class="">La différence majeure avec le parcours classique sont les horaires : 20h par semaine pour le parcours classique et 25h pour le parcours réussite ainsi que les matières qui sont, pour le parcours classique, deux fondamentales et 4 complémentaires.</p><p id="233e6e72-7292-800f-9861-e2095077c02f" class="">Pour le parcours réussite en licence d’économie et gestion, les étudiants auront des travaux dirigés supplémentaires en expression écrite et orale, en statistiques et en mathématiques.</p></li></ul></details></li></ul><ul id="233e6e72-7292-809c-a3b5-f500ff8cf66b" class="toggle"><li><details open=""><summary>Comment fonctionnent les examens ? Quelle est la notation ?</summary><p id="233e6e72-7292-8066-bcb5-f930a2b48cfb" class="">Les examens se déroulent en deux sessions, une en janvier pour le premier semestre et une en juin pour le second semestre. Pendant deux semaines, il y a une ou deux épreuves(s) par jour. Les matières fondamentales sont notées sur 20 et durent trois heures, tandis que les complémentaires sont notées sur 10 et durent 1h30.</p><p id="233e6e72-7292-801c-9659-f1756ab2f260" class="">Pour valider une matière, il suffit d’avoir au moins 10 de moyenne. Pour les matières fondamentales, la note est la moyenne des notes de TD et du partiel. Cependant, il existe un large système de compensation qui permet de ne pas être obligé de valider chaque matière pour valider son année. Ce système est expliqué en détail à la question « comment fonctionne le système de compensation ? »</p></details></li></ul><ul id="233e6e72-7292-8001-8c2f-f9b208f0cd3e" class="toggle"><li><details open=""><summary>Comment fonctionne le système de compensation ?</summary><p id="233e6e72-7292-804b-8f7d-fa8b184a1312" class="">Tout d’abord, il existe une compensation annuelle : les deux semestres de l’année se compensent. Par exemple, si vous avez obtenu 7/20 de moyenne générale au premier semestre, mais qu’au deuxième vous avez obtenu une moyenne générale de 13/20, votre moyenne générale de l’année sera 10/20.</p><p id="233e6e72-7292-80b2-89f8-d759a9688169" class="">Il existe aussi la compensation semestrielle : sur un semestre, si la moyenne du bloc fondamental et celle du bloc complémentaire est supérieure à 10, le semestre est validé.</p><p id="233e6e72-7292-80ce-bce5-fcaacb38a8e8" class="">Enfin, il y a une compensation au sein même des blocs : si la moyenne des matières composant le bloc est supérieure à 10, le bloc est validé. Par exemple, si vous avez obtenu 15/20 en droit civil et 5/20 en droit constitutionnel, le bloc des matières fondamentales est validé.</p></details></li></ul><ul id="233e6e72-7292-80d6-ad24-c05f94d83055" class="toggle"><li><details open=""><summary>Comment s’inscrire aux rattrapages ?</summary><p id="233e6e72-7292-80fa-8e36-df4a32c1f8e3" class="">A l’université Paris II Assas, les rattrapages se déroulent en septembre. Pour pouvoir se présenter à la session de septembre, il est obligatoire de s’y inscrire sur internet. Par prudence, il est conseillé de s’inscrire, même si vous avez fait un très bon premier semestre. Il ne faut pas dépasser la date butoir (qui vous sera indiquée pendant l’année), sinon il vous sera impossible de venir aux rattrapages.</p></details></li></ul><ul id="233e6e72-7292-8084-9485-c6e05b9519f0" class="toggle"><li><details open=""><summary>Comment fonctionnent les examens de rattrapages ?</summary><p id="233e6e72-7292-80b9-9f56-ddff8c06fad5" class="">A la fin de l’année, si vous n’avez pas obtenu au moins 10/20 de moyenne générale, vous vous présenterez aux examens de rattrapages en septembre. Vous aurez à repasser toutes les matières auxquelles vous avez eu moins de 10. Seules vos notes obtenues aux rattrapages seront comptabilisées, les notes de TD et les notes des partiels sont effacées. Toutes les matières où vous aurez plus de 10 seront validées et le système de compensation est le même que pendant l’année.</p></details></li></ul><ul id="233e6e72-7292-809b-8baf-d49330df7673" class="toggle"><li><details open=""><summary>Comment consulter l’une de ses copies d’examen ?</summary><p id="233e6e72-7292-80f5-96d5-d9ec9fe970ad" class="">Pour chaque copie demandée, il faut remplir le formulaire de consultation de copies et le donner à l’accueil ou à la scolarité.</p><p id="233e6e72-7292-8041-8fc7-c7a722bee45e" class="">Vous pouvez le télécharger grâce à <a href="https://www.u-paris2.fr/sites/default/files/scolarite-bourses/fichiers/formulaire_consultation_copie_capacite_1ere_annee.doc">ce lien</a> !</p><p id="233e6e72-7292-80f2-ae42-e51f410ebbad" class="">Il faut remplir un formulaire par copie demandée et indiquer votre numéro de copie sur chaque formulaire. Pour trouver les numéros de copies, vous pouvez consulter vos résultats sur internet, ils y sont marqués.</p><p id="233e6e72-7292-8070-b13e-dfb9b67f0765" class="">Si une personne vient consulter vos copies à votre place, celle-ci devra présenter les documents suivants :</p><ul id="233e6e72-7292-8086-bdc9-f4f0d607aac4" class="bulleted-list"><li style="list-style-type:disc">un courrier papier, signé de votre part, lui donnant procuration,</li></ul><ul id="233e6e72-7292-802d-a10a-c919c55cc43a" class="bulleted-list"><li style="list-style-type:disc">sa pièce d&#x27;identité,</li></ul><ul id="233e6e72-7292-80cf-9a20-f0b5eb1225c8" class="bulleted-list"><li style="list-style-type:disc">une photocopie de votre carte étudiante,</li></ul><ul id="233e6e72-7292-80ce-adbe-e9979b51a100" class="bulleted-list"><li style="list-style-type:disc">le formulaire de consultation de copie complété.</li></ul><p id="233e6e72-7292-8095-8f75-c8a232108c29" class="">Si vous voulez photocopier vos copies, vous effectuerez vous-même la photocopie de vos copies d&#x27;examen avec votre carte de photocopie CARTADIS ou IZLY.</p></details></li></ul><ul id="233e6e72-7292-8002-9082-fe2dacdb99ac" class="toggle"><li><details open=""><summary><strong>Quelle est la différence entre le bloc fondamental et le bloc complémentaire ?</strong></summary><p id="233e6e72-7292-80bd-b3bd-c3fdbb1de9ae" class="">En licence de droit, en 1ère année, il y a deux matières fondamentales (le droit civil et le droit constitutionnel). Ces matières fondamentales sont réparties pour chaque semestre dans un bloc à part (UEF1 et UEF2). Ce sont les matières les plus importantes, il y a donc des cours magistraux et des travaux dirigés. Elles sont affectées d’un coefficient fort (2).</p><p id="233e6e72-7292-803a-bab8-d712d5f4e4e0" class="">Les matières complémentaires sont semestrielles, c’est-à-dire qu’elles sont réparties pour chaque semestre dans un bloc (UEC1 et UEC2). Pour ces matières, il n’y a que des cours magistraux et elles sont affectées du coefficient 1.</p><p id="233e6e72-7292-80cb-8b90-fecad39a612a" class="">Pour la licence d’économie gestion, c’est la même chose. Les matières fondamentales au premier semestre sont mathématiques, statistiques, macroéconomie et microéconomie. Au deuxième semestre, ce sont  mathématiques, statistiques, macroéconomie et comptabilité.</p></details></li></ul><ul id="233e6e72-7292-803f-8c39-f0e20c99e989" class="toggle"><li><details open=""><summary>Que sont les galops d’essai ?</summary><p id="233e6e72-7292-805a-ad6f-ee71174243e3" class="">Les galops d’essai sont des épreuves écrites en Droit Constitutionnel et en Droit Civil qui se déroulent plusieurs mois avant les partiels. Il y en a un au premier semestre et un autre au second semestre. C’est une sorte d’entrainement qui permet de se mettre dans les mêmes conditions que celles des partiels, d’évaluer son niveau ainsi que la difficulté de l’exigence demandée par les professeurs. Les galops d’essai représentent 50 % de la note du TD, c’est-à-dire 25% de la note finale. Ainsi, il ne faut pas les négliger !</p></details></li></ul><ul id="233e6e72-7292-80a4-9025-ca76512da920" class="toggle"><li><details open=""><summary><strong>Qu&#x27;est-ce que le CROUS ? Que peut-il nous apporter ?</strong></summary><p id="233e6e72-7292-80c2-87b6-cbc7c010ffa6" class="">Le CROUS, c’est le Centre régional des œuvres universitaires et scolaires de Paris. C’est le service public de la vie étudiante. Son but est de favoriser l’amélioration des conditions de vie et d’études des étudiants de l’académie de Paris. Le CROUS propose de très nombreux services tels que des restaurants universitaires très peu chers (il y en a un situé à proximité du centre Assas dans le 6ème arrondissement par exemple), des attributions de bourses pour vous aider à financer vos études, des résidences universitaires, des centres sportifs et culturels etc…</p><p id="233e6e72-7292-80dd-9de7-cabe84cfd513" class="">Pour obtenir des informations plus détaillées sur le CROUS, retrouvez tout sur le site <a href="http://www.crous-paris.fr/">http://www.crous-paris.fr/</a></p></details></li></ul><ul id="233e6e72-7292-809f-b12f-eb24bfd8a9b9" class="toggle"><li><details open=""><summary>Le sport à l’Université : comment s’inscrire ? Qu’est-ce que cela apporte ?</summary><p id="233e6e72-7292-80a0-8dc2-d5ceee0dda1d" class="">Les étudiants qui le souhaitent ont la possibilité de pratiquer un ou plusieurs sports. Un vaste choix d&#x27;activités réparties sur 195 créneaux horaires de 8h à 22h du lundi au vendredi et le samedi de 8h à 13h et accessibles quel que soit le niveau de pratique. Il est possible de s’inscrire a compté du 9 septembre jusqu’au 25 octobre en ligne sur le site de l’université ou par l’application « Sportunivparis2 » disponible sur l’Apple store et Google Play. Enfin, pour les nouveaux inscrits, il est important de fournir un certificat médical établi au maximum 3 mois avant l’inscription et établi sur 3 ans !</p></details></li></ul><ul id="233e6e72-7292-80d0-b987-dfa6cda9898e" class="toggle"><li><details open=""><summary>Comment et pourquoi utiliser l’ENT ?</summary><p id="233e6e72-7292-800a-82fe-f7eec66477dd" class="">L’ENT ( Espace numérique de travail ) est un site dont chaque étudiant à accès via son certificat de scolarité, il vous sera utile tout au long de l’année pour garder un contact avec vos chargés de TD ainsi qu’avec l’administration. L’ENT vous donnera aussi accès à une grande quantité de ressources pédagogiques et documentaires.</p><p id="233e6e72-7292-80c5-aa7a-d965af198436" class=""><a href="https://www.youtube.com/watch?v=mmTzEtr_q6c&amp;list=PLRE9wB-Iq0Wo9GFUIBdZ5VxDvWwnvmWJ0&amp;index=3&amp;t=0s">Retrouvez notre vidéo explicative sur comment utiliser l&#x27;ENT !</a></p></details></li></ul><ul id="233e6e72-7292-80c9-96ca-cf9f5cc8cfcc" class="toggle"><li><details open=""><summary><strong>Les élections étudiantes : qu&#x27;est-ce que c&#x27;est ? Qu&#x27;est-ce que ça apporte ? Pourquoi voter ?</strong></summary><p id="233e6e72-7292-80cd-9efe-d6f4d52987ed" class="">Il y a plusieurs élections étudiantes qui ont lieu tous les 2 ans :</p><ul id="233e6e72-7292-80e3-96af-da62dc766640" class="bulleted-list"><li style="list-style-type:disc">Les UFR (Unité de Formation et de Recherche) qui sont des conseils consultatifs qui s’occupent de l’organisation des études supérieures au sein de la faculté. Il existe une UFR pour chaque cycle (licence, master et doctorat) et parcours (droit, économie-gestion, IEJ et IFP). Ils vont émettre des avis sur les projets de création de diplômes, l’évaluation des enseignements, des formations etc.</li></ul><ul id="233e6e72-7292-8091-a3cf-dfa10e7e1d55" class="bulleted-list"><li style="list-style-type:disc">Les élections aux centraux sont divisés en deux conseils. Il y a le CA (Conseil d’Administration), un conseil décisionnaire qui va déterminer la politique de l’université en votant le budget, approuvant les accords et conventions, adoptant le règlement intérieur, répartissant les moyens en fonction de la stratégie de l’établissement etc.</li></ul><ul id="233e6e72-7292-80d3-8441-e452d520214d" class="bulleted-list"><li style="list-style-type:disc">Il y a aussi la CFVU (Commission de la Formation et de la Vie Universitaire), un conseil consultatif qui émet des avis sur diverses questions de politique de formation et qui organise les études au niveau pédagogique et administratif et adopte les règles relatives aux examens, d’évaluation des enseignements etc.</li></ul><p id="233e6e72-7292-8026-bd32-e53e3ee2478b" class=""><strong>Qu’est-ce que cela apporte ?</strong></p><p id="233e6e72-7292-807c-a44b-ef54a63a7b59" class="">Les élections aux UFR et aux Centraux ont permis, par exemple, une meilleure représentation des étudiants en filière d’information et communication, la mise en place de TPE au CROUS, ou encore la création des galops d’essai. Il est donc important de ne pas négliger l’importance de ces élections étudiantes dont le seul but est d’améliorer vos conditions de vie et d’études à l’université.</p><p id="233e6e72-7292-8074-a5ad-e75a46714092" class=""><strong>Pourquoi voter ?</strong></p><p id="233e6e72-7292-8031-aaad-c338bbf54235" class="">Parce que voter c’est important ! Cela vous permet d’avoir un rôle plus actif au sein de l’université et de choisir les étudiants qui vont vous représenter au mieux. Soyez acteur de votre vie à l’université.</p></details></li></ul><ul id="233e6e72-7292-8059-a34d-ed03a046e232" class="toggle"><li><details open=""><summary>Les travaux dirigés : comment sont-ils notés ? Comment peut-on changer d’horaire ?</summary><p id="233e6e72-7292-80a3-b46b-f320f87b545d" class="">Les Travaux Dirigés sont des cours hebdomadaires obligatoires qui permettent de compenser la note obtenue au partiel à la fin du semestre. La note de TD représente la moitié de la note totale. Par exemple, si vous avez eu 8 à votre partiel de droit civil et 12 à votre TD de civil, votre note finale de  droit civil sera 10.</p><p id="233e6e72-7292-8020-8ef8-d40e94508b39" class="">La note de TD est divisée en deux : le galop d’essai compte pour 50 % et tous les devoirs et interrogations de cours rendus durant le semestre comptent pour les 50 % restants. De plus, le TD étant obligatoire, les absences non justifiées peuvent retirer plusieurs points dans la moyenne, et plus de deux absences non justifiées vous rendent défaillants dans la matière. En revanche, une participation régulière et fréquente peut rapporter jusqu’à deux points dans la moyenne.</p><p id="233e6e72-7292-80a8-a960-d8461a265ad4" class="">Pour changer d’horaire, il faut s’adresser directement à la scolarité.</p></details></li></ul><ul id="233e6e72-7292-8033-afc2-e06d8cbe50ff" class="toggle"><li><details open=""><summary>Comment se réorienter ? Le changement de filière est-il envisageable ?</summary><p id="233e6e72-7292-8015-8371-d92e1af5f864" class="">Premièrement, si vous souhaitez vous réorienter à la fin du premier semestre de première année de licence (L1), il suffit de télécharger un dossier qui sera mis en ligne sur le site Assas Paris 2 dans l’onglet Formation – Réorientation. Ensuite, votre dossier sera étudié par une commission qui acceptera ou non votre demande de réorientation. Ce dossier vous permet de demander d’intégrer la licence de droit, d’économie-gestion, d’information et communication ou d’AES. Cette réorientation en fin de premier semestre concerne les étudiants internes ou externes à Assas.</p><p id="233e6e72-7292-80d2-b6fc-fdfe8390788d" class="">Deuxièmement, si vous souhaitez vous réorienter à la fin de votre première année de licence (L1), vous devrez passer par le portail national Parcoursup. Cette réorientation concerne les étudiants internes ou externes à Assas.</p><p id="233e6e72-7292-80f2-8b46-eea4ea91ec64" class="">Enfin, il existe les équivalences : par exemple, il est possible de passer d’une L1 d’information et communication à une L2 de droit à plusieurs conditions : il faut avoir validé sa licence, avoir eu de bonnes notes et présenter un dossier de candidature qui sera examiné par une commission qui l’acceptera ou non. Pour tout renseignement supplémentaire, le mieux est de s’adresser à l’administration ou de regarder le site de l’université.</p></details></li></ul><ul id="233e6e72-7292-80d4-8ad8-d92ffc893903" class="toggle"><li><details open=""><summary>Comment s’engager dans l’associatif, le caritatif à Assas ?</summary><p id="233e6e72-7292-80ec-a5cd-e752c666268e" class="">Il existe à Assas une très grande diversité d’associations : il y en a plus d’une centaine et il y en a pour tous les goûts ! De la voile au ski en passant par l’éloquence ou la musique, chacun peut trouver une association qui lui correspond. Lors de la pré-rentrée est organisée une présentation des associations, les présidents expliquent en une minute aux nouveaux étudiants en quoi consiste leur association.</p><p id="233e6e72-7292-8080-a8d0-dda7067c8172" class="">Quelques jours plus tard a lieu, au centre Assas, la Journée des associations durant laquelle toutes les associations (ou presque) tiennent un stand et sont là pour répondre à toutes vos questions !</p><p id="233e6e72-7292-80e5-9384-fd3ea0def82c" class="">Pour s’engager dans le caritatif à Assas, il y a des associations comme Carit’Assas, Amnesty ou l’UNICEF qui sauront vous plaire.</p></details></li></ul><ul id="233e6e72-7292-80da-9e33-e635fc37a01d" class="toggle"><li><details open=""><summary>Comment partir étudier à l’étranger ? L’éventualité d’une année de césure ?</summary><p id="233e6e72-7292-801f-9a03-c1aea6456e32" class="">Un programme d&#x27;échange d&#x27;étudiants s&#x27;inscrit dans un cadre institutionnel. Cela signifie que les échanges d&#x27;étudiants sont définis dans un accord qui a été conclu entre l&#x27;Université Paris 2 Panthéon-Assas et une ou plusieurs institution(s) (universités, institutions européennes ou multilatérales). La majorité des programmes d&#x27;échange d&#x27;étudiants de l&#x27;université Paris 2 Panthéon-Assas en Europe sont régis par des accords Erasmus+.</p><p id="233e6e72-7292-8004-9fea-d255505d555b" class="">Pour participer à un programme d&#x27;échange de l&#x27;université Paris 2 Panthéon-Assas, il faut être étudiant de cette université l&#x27;année de la candidature. Si vous souhaitez vous porter candidat pour un départ en Licence 3, il faut postuler en Licence 2 ; pour un départ en Master 1, il faut postuler en Licence 3 ; pour un départ en Master 2, il faut candidater en Master 1. Attention, les étudiants arrivant en juillet par transfert d&#x27;une autre université ne peuvent pas partir en échange pendant leur première année d&#x27;études à Paris 2.</p><ul id="233e6e72-7292-80e7-907b-c5a50fafd5f0" class="bulleted-list"><li style="list-style-type:disc">Consultez le calendrier des étapes à suivre : Rubrique &quot;À télécharger&quot;,</li></ul><ul id="233e6e72-7292-8017-adbb-e4d7147f268d" class="bulleted-list"><li style="list-style-type:disc">Participez aux réunions d&#x27;information qui ont lieu entre octobre et novembre,</li></ul><ul id="233e6e72-7292-8085-ab09-f61cf7281a1d" class="bulleted-list"><li style="list-style-type:disc">Consultez le guide du candidat (obligatoire) : rubrique &quot;À télécharger »,</li></ul><ul id="233e6e72-7292-80e0-ae71-c98fe526fd78" class="bulleted-list"><li style="list-style-type:disc">Consultez les instructions pour remplir sa candidature en ligne (obligatoire) : instructions 2019-2020 à venir, renseignez le formulaire électronique à partir de mi-décembre 2019 : détails à venir.</li></ul><p id="233e6e72-7292-8092-a14d-ede60295226b" class="">Ajouter en ligne les justificatifs demandés :</p><ul id="233e6e72-7292-80a7-9046-fbbc036e1627" class="bulleted-list"><li style="list-style-type:disc">Une lettre de motivation en français (un personal statement en anglais pour les Etats-Unis et Toronto uniquement),</li></ul><ul id="233e6e72-7292-8059-bf6a-f4f3b27637f3" class="bulleted-list"><li style="list-style-type:disc">Les relevés de notes de chaque année universitaire (y compris les redoublements). Attention : les relevés de notes sont à retirer auprès du service de scolarité. Les impressions internet ne sont pas autorisées,</li></ul><ul id="233e6e72-7292-80bd-b5e8-e7ab0b214c3e" class="bulleted-list"><li style="list-style-type:disc">Une photo d&#x27;identité,</li></ul><ul id="233e6e72-7292-80d8-af48-e3afb0e126dc" class="bulleted-list"><li style="list-style-type:disc">Le relevé de notes du baccalauréat,</li></ul><ul id="233e6e72-7292-8036-b5cb-f83ec57b7a6c" class="bulleted-list"><li style="list-style-type:disc">Justificatifs du niveau de connaissance de la langue d&#x27;enseignement de l&#x27;université d&#x27;accueil quand ils sont requis (diplômes/certificats éventuels).</li></ul></details></li></ul><ul id="233e6e72-7292-802a-acd9-da10eec7daca" class="toggle"><li><details open=""><summary>Pour décrocher un stage en première année, quelles démarches faut-il faire ?</summary><p id="233e6e72-7292-80a2-b7fa-ea7b08e70156" class="">Pour effectuer un stage, l&#x27;étudiant doit être régulièrement inscrit à l&#x27;université Paris 2 Panthéon-Assas et suivre une formation d&#x27;au moins 200h d&#x27;enseignement. Le stage doit correspondre au cursus suivi. Il se déroule exclusivement durant l&#x27;année universitaire pour laquelle l&#x27;étudiant est inscrit (du 1er septembre au 30 septembre de l&#x27;année suivante). La durée effective du stage ne peut dépasser 6 mois.</p><p id="233e6e72-7292-8037-b4ba-efb8ff1935cf" class="">Une convention de stage est nécessaire : Il incombe au stagiaire de se garantir au titre de la responsabilité civile auprès d&#x27;un assureur (assureur habitation, banque, mutuelles étudiantes). Pour les stages à l&#x27;étranger ou outremer, le stagiaire s&#x27;engage à souscrire un contrat d&#x27;assistance et un contrat d&#x27;assurance individuel accident.</p><p id="233e6e72-7292-8031-9cb9-da3c70c0a80d" class="">Les conventions de stage font l’objet d’une saisie en ligne. Une fois la saisie terminée, la convention doit être imprimée (3 exemplaires : organisme d’accueil, étudiant et université).</p><ul id="233e6e72-7292-80c4-be05-c3a5558b25fb" class="bulleted-list"><li style="list-style-type:disc">avant de commencer la saisie, il faut s’assurer d’être en possession de toutes les informations nécessaires, notamment le nom et l’adresse de l’organisme d’accueil, le nom du signataire de la convention, le nom du tuteur de stage, les dates du stage…</li></ul><ul id="233e6e72-7292-809a-ac87-e4e80377a5e4" class="bulleted-list"><li style="list-style-type:disc">toutes les rubriques de la convention de stage doivent être remplies en liaison avec l’organisme d’accueil. Toute convention mal renseignée sera rejetée.</li></ul></details></li></ul><ul id="233e6e72-7292-802c-b21e-cc591d164538" class="toggle"><li><details open=""><summary>Comment obtenir une bourse étudiante ? Quelles sont les différentes offres ?</summary><p id="233e6e72-7292-806e-b7a0-f6015db8e753" class="">Pour demander une bourse il faut :</p><p id="233e6e72-7292-800d-9c3e-f46f81e58241" class="">Faire une demande à partir du 15 janvier sur messevices.etudiant.gouv.fr (section demander une bourse). Le dossier est ensuite envoyé par mail 48 heures plus tard. Il faut le vérifier et envoyer les pièces demandées par courrier sous 8 jours (sauf si le dossier à déjà été numérisé).Le Crous va ensuite traiter et éditer un avis conditionné qu’il envoie ensuite par mail. Il faut ensuite présenter l’avis conditionné lors de l’inscription à l’université. Après confirmation du statut étudiant, un mail est envoyé pour un avis définitif de bourse qui est ensuite envoyé de septembre à juin de l’année universitaire à date fixe.</p><p id="233e6e72-7292-8008-afaf-e43a724737c9" class="">Il existe une bourse sur critères sociaux :</p><p id="233e6e72-7292-80cb-b90c-c7a8928a6911" class="">Ces bourses sont destinées aux étudiants de moins de 28 ans, aux ressources familiales limitées et poursuivant des études en formation initiale dans un établissement relevant du ministère de l’Éducation nationale, de l’Enseignement supérieur, de la Recherche et de l’Innovation, du ministère de la Culture et de la Communication ou du ministère de l’agriculture, de l’agroalimentaire et de la forêt.</p><p id="233e6e72-7292-8022-88f8-d6be90cdfbc0" class="">La bourse sur critères sociaux ouvre des droits tels que le paiement d’une bourse au montant fixé par échelon, chaque début de mois, l’exonération des frais d’inscription universitaire, l’exonération de la CVEC (Contribution de Vie Étudiante et de Campus), la priorité dans l’attribution d’un logement étudiant du Crous de Paris.</p><p id="233e6e72-7292-8018-8ec6-e901b3cfa2a8" class="">En revanche, en tant qu’étudiant boursier de l’enseignement supérieur, vous avez des droits et obligations issus de ce statut, notamment en matière d’assiduité aux cours et de présence aux examens.</p><p id="233e6e72-7292-807e-a972-ce1a6515eb64" class="">
+</p><p id="233e6e72-7292-80cf-914f-e23cc683e925" class="">Il existe aussi l’aide au mérite :</p><p id="233e6e72-7292-8096-8de7-c02a97b80a67" class="">C’est un complément à la bourse sur critères sociaux pour les étudiants les plus méritants. Elle s’adresse aux étudiants boursiers ou bénéficiaires d’une allocation d’aide spécifique annuelle et qui ont obtenu la mention « très bien » à la dernière session du baccalauréat ou qui l’ont reçu l’année précédente. Vous n’avez aucune démarche à faire pour l’obtenir, la liste des bénéficiaires est transmise automatiquement aux Crous. La décision définitive d’attribution ou de non attribution de l’aide au mérite est ensuite prise par le recteur et notifiée au candidat. L’étudiant doit faire preuve d’assiduité aux cours et aux examens et ne pas redoubler (sauf raisons médicales).</p><p id="233e6e72-7292-8095-bdcf-d4524abedd6a" class="">Il existe aussi l’aide régionale au mérite qui récompense les étudiants franciliens ayant obtenu la mention très bien au baccalauréat en île de France, en leur décernant une bourse au mérite fixée à 1000€.</p><p id="233e6e72-7292-8019-89d0-c2bfbc9af99b" class="">Pour pouvoir en bénéficier, l’étudiant doit d’abord avoir déposé un dossier social étudiant (DSE) par l’intermédiaire de la plateforme <a href="http://messervices.etudiant.gouv.fr/">messervices.etudiant.gouv.fr</a>, bloc DSE.<br/>Une fois cette démarche effectuée, aucune autre démarche est à accomplir. La Région versera l’aide, par l’intermédiaire du Crous de Paris.</p></details></li></ul><ul id="233e6e72-7292-8034-a7d0-c6d09aabec24" class="toggle"><li><details open=""><summary>Quelles sont les différentes formations proposées à Assas ?</summary><p id="233e6e72-7292-801a-8f02-df459426b303" class="">Les formations offertes à Assas recouvrent cinq disciplines : le droit, l’économie, la gestion, l’information et la communication, et les sciences politiques. L’université délivre des diplômes nationaux : licences, double-licences, masters, doctorats. Elle propose également de nombreux diplômes d’université et prépare à des concours et examens professionnels, comme les conférences d’agrégation, les examens d’entrée au barreau, le concours de la magistrature...</p><p id="233e6e72-7292-8050-8d1e-f05c968b9d70" class="">La plateforme agor@ssas complète ce dispositif, en proposant des cours en ligne accessibles 24h/24, dispensés par des enseignants de l&#x27;université, sous forme de vidéos enrichies de multiples ressources pédagogiques.</p><p id="233e6e72-7292-8079-9c03-cd9a4bc12b51" class="">Sont actuellement proposés :</p><ul id="233e6e72-7292-80cd-bd5e-e00bfe603ccb" class="bulleted-list"><li style="list-style-type:disc">une licence en droit (cursus complet avec délivrance de diplôme),</li></ul><ul id="233e6e72-7292-8028-8f7c-f14539244ed4" class="bulleted-list"><li style="list-style-type:disc">une préparation aux premier, second et troisième concours d&#x27;entrée à l&#x27;École Nationale de la Magistrature (ENM),</li></ul><ul id="233e6e72-7292-8049-9ec6-c0ccfd1341cf" class="bulleted-list"><li style="list-style-type:disc">des MOOCs juridiques relayés sur la plateforme de France Université Numérique (FUN),</li></ul><ul id="233e6e72-7292-80c6-9c56-f94b9cad02fc" class="bulleted-list"><li style="list-style-type:disc">un coaching en ligne pour la préparation au barreau (CRFP@SSAS IEJ COACHING)</li></ul></details></li></ul><ul id="233e6e72-7292-8033-88e8-ccc40fc13921" class="toggle"><li><details open=""><summary>Quels sont les services de santé disponibles à la fac ?</summary><p id="233e6e72-7292-80d9-8b8b-d685fc80c59e" class="">L&#x27;infirmière fait partie des personnes référentes en matière de santé au sein de l&#x27;université. Elle met à la disposition des étudiants une documentation sur les thèmes de santé ainsi que les adresses des centres de soins, d&#x27;examens biologiques ou radiologiques, de vaccination et de dépistage, du planning familial. elle assure :</p><ul id="233e6e72-7292-805f-8952-e92e3972d925" class="bulleted-list"><li style="list-style-type:disc">un accueil, une écoute et un suivi personnalisé,</li></ul><ul id="233e6e72-7292-80b2-ac65-c46c1e945c79" class="bulleted-list"><li style="list-style-type:disc">l&#x27;accompagnement des étudiants porteurs d&#x27;un handicap ou souffrant d&#x27;une maladie lourde,</li></ul><ul id="233e6e72-7292-808f-be0c-da5ceef1711c" class="bulleted-list"><li style="list-style-type:disc">les premiers secours et les soins d&#x27;urgence en cas de maladie, malaise, accident, les traitements sur prescription médicale,</li></ul><ul id="233e6e72-7292-8054-879c-f3baa97c21d2" class="bulleted-list"><li style="list-style-type:disc">des actions collectives de prévention sur des sujets tels que le tabac, le stress, le SIDA, l&#x27;alimentation, etc.,</li></ul><ul id="233e6e72-7292-80e5-a173-f19db8c5aeaf" class="bulleted-list"><li style="list-style-type:disc">des formations aux premiers secours pour les étudiants et le personnel de l&#x27;université.</li></ul><p id="233e6e72-7292-8081-a997-fd077b4d8499" class="">L&#x27;infirmière est présente tous les jours lors des examens écrits. Sur tous les sites où il n&#x27;y a pas d&#x27;infirmière, des trousses de premiers soins sont disponibles. Les personnes habilitées à en faire usage sont désignées par le Directeur du centre et sont titulaires d&#x27;un diplôme de premiers secours.</p></details></li></ul><ul id="233e6e72-7292-800a-bd6a-c6a235ff3a4b" class="toggle"><li><details open=""><summary>Quelles sont les disponibilités que vous offre votre carte étudiante ?</summary><p id="233e6e72-7292-805a-a01c-dd52ba1b0b1c" class="">Multiservices, votre carte est dotée d’un porte-monnaie électro- nique. Avec le paiement sans contact, le passage en caisse est plus rapide. La carte vous permet de : justifier de votre statut d’étudiant, puisque vous devez la présenter pour accéder aux bâtiments et aux bibliothèques universitaires de l’université Paris II Panthéon-Assas, bénéficier de réductions (transports, cinémas, piscines, théâtres municipaux...) :</p><ul id="233e6e72-7292-8096-b98f-d8574d928fb0" class="bulleted-list"><li style="list-style-type:disc">payer vos repas dans les restaurants ou cafétérias du CROUS,</li></ul><ul id="233e6e72-7292-80df-9969-f9bcf2fb0e69" class="bulleted-list"><li style="list-style-type:disc">payer vos impressions et photocopies dans nos bibliothèques,</li></ul><ul id="233e6e72-7292-80b5-ae2f-cdd63e811bd3" class="bulleted-list"><li style="list-style-type:disc">réserver des salles de travail au centre Assas,</li></ul><ul id="233e6e72-7292-8098-bbc7-d4625cc15548" class="bulleted-list"><li style="list-style-type:disc">accéder à la salle de sport du centre Assas (sous réserve d’inscription au service des sports),</li></ul><ul id="233e6e72-7292-8036-8790-c98703b20c00" class="bulleted-list"><li style="list-style-type:disc">emprunter des ordinateurs portables et des tablettes auprès de la bibliothèque pour une utilisation sur place dans le Learning Center du centre Assas ou dans les centres Vaugirard 1 et Melun.</li></ul><p id="233e6e72-7292-8041-8817-ce43e965e1e6" class="">Elle est valable pendant tout votre cursus à l’université Paris II Panthéon-Assas et vous sera demandée pour accéder à certains bâtiments (contrôle des entrées au centre Assas) et lors des sessions d’examens</p></details></li></ul><p id="233e6e72-7292-80a9-a93e-fb1d2a0abbd6" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
